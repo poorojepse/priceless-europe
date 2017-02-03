@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <title>{{page.title}}</title>
+   
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" type="text/css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700|Cookie">
+   <link rel="shortcut icon" href="">
+      
+</head>
+<body>
+
+<header class="site-header">
+   <section class="header">
+      <div class="container-nav">
+         <div class="nav-container">
+            <div class="nav-banner">
+               <a href="{{site.baseurl}}/">
+                  <img src="{{site.baseurl}}/assets/img/banner.png">
+               </a>
+            </div>
+            
+            <nav class="nav-main">
+               <ul class="nav">
+                  <li class="nav-item home"><a href="{{site.baseurl}}/">{% include icons/home.html %}</a></li>
+                  <li class="nav-item accommodation"><a class="scroll" href="#accommodation">Accommodation</a></li>
+                  <li class="nav-item tour-highlights"><a class="scroll info" href="#information">Tour Highlights</a></li>
+                  <li class="nav-item visa-requirements"><a class="scroll info" href="#information">Visa Requirements</a></li>
+                  <li class="nav-item booking-conditions"><a class="scroll info" href="#information">Booking Conditions</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </section>
+</header>

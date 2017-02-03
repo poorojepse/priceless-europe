@@ -1,0 +1,80 @@
+---
+layout: default
+title: Priceless Europe
+---
+
+<section id='itinerary' class='section-main'>
+   <div class='container'>
+      <h3 class='section-title'>Itinerary</h3>  
+         {% for day in site.days %}
+         <div class='itinerary-item'>
+            <div class='itinerary-header'>
+               <h4 class='title'>{{day.day}}: </h4>
+               <h4 class='sub-title'>{{day.distination}}</h4>
+            </div>
+
+            <div class='itinerary-body'>
+               <p class='blurb'>{{day.excerpt | remove: '<p>' | remove: '</p>'}}</p>
+               <a class='read-more' href=''></a>
+            </div>
+         </div>   
+         {% endfor %}
+      </div>
+   </div>   
+</section>
+
+<section id='information' class='section-alt'>
+   <div class='container'>
+      <h3 class='section-title'>information</h3>
+      <div class='information-flexrow'>
+         {% for info in site.data.information %}
+         <div id='{{info.id}}' class='information-flexitem'>
+            <div class='information-item'>
+               <a class='information-name'><h4>{{info.name}}</h4></a>
+               <div class='information-content'>
+                  {{info.content}}      
+               </div>
+            </div>
+         </div>  
+         {% endfor %}
+      </div>
+   </div>
+</section>
+
+<section id='accommodation' class='section-main'>
+   <div class='container'>
+      <h3 class='section-title'>Accommodation</h3>
+      {% for accm in site.data.accommodation %}
+      <div class='accommodation-support'>
+         <h4 class='accommodation-title'>{{accm.title}}</h4>
+         <div class='accommodation-flexrow' data-title='{{accm.title}}'>
+            {% for img in accm.image %}
+            <img class='accommodation-flexitem acm-photo' src='{{site.baseurl}}/assets/img/accomodation/{{img.img}}'>
+            {% endfor %}
+         </div>    
+      </div>
+      {% endfor %}
+   </div>
+</section>
+
+<section id='contact' class='section-alt'>
+   <div class='container'>
+      <header class='contact-header'>
+         <h1 class='contact-title'>Contact Us Now!</h1>
+         <hr class='contact-separator'/>
+      </header>
+      <section class='contact-content'>
+         <p class='contact-bluff'>Thats great! Give us a call or send us email and we will get back to you as soon as possible!</p>
+         <div class='contact-flexrow'>
+            <div class='contact-flexitem phone'>
+               <a href='tel:{{ site.data.settings.phone }}'>{% include icons/phone.html %}</a>
+               <p>{{ site.data.settings.phone }}</p>
+            </div>
+            <div class='contact-flexitem mail'>
+               <a href='mailto:{{ site.data.settings.mail }}'>{% include icons/mail.html %}</a>
+               <p>{{ site.data.settings.mail }}</p>
+            </div>
+         </div>
+      </section>
+   </div>
+</section>

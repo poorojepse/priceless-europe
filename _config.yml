@@ -1,0 +1,7 @@
+markdown: kramdown
+baseurl: /priceless-europe
+permalink: pretty
+
+collections:
+ days:
+ 

@@ -1,0 +1,24 @@
+- name: inclusions
+  id: inclusions
+  content: '<p>Roundtrip International Airfare via EK/EY/QR/TK</p><p>Roundtrip Transfer Service based on Private Coach</p><p>11N Accommodation at 4* Hotel</p><p>Meals specified in the itinerary (Half Board Meals)</p><p>2 Bottles of Water/pax/ day (500ml)</p><p>Tours, transfer and admission fees based on itinerary</p><p>*Full day guided tour in Rome & Amsterdam</p><p>*Half day guided tour in Paris</p><p>*2 Hours guided tour in Venice, Heidelberg & Cologne</p><p>*Entrance Fee in Vatican Museum,</p><p>*Van Gogh Museum, Versailles Palace</p><p>*Ascending to the 2nd Floor Eiffel and Mini Europe</p><p>*Cable Car: Mt. Titlis Excursion</p><p>*Canal Cruise: Amsterdam Canal Cruise, Venice Boat Taxi</p><p>Hotel Porterage Service</p><p>Local Tour Escort</p><p>Travel Insurance for 1-59 years old only. Beyond this age is at passenger’s own expense.</p>'
+    
+- name: exclusions
+  id: exclusions
+  content: '<p>Airline and Airport taxes USD 117.00 p/p (Subject to change)</p><p>Philippine Travel Tax – PHP1,620 p/p</p><p>Mandatory Tipping for Driver – EUR2.00 p/p/day</p><p>Mandatory Tipping for Local Escort – EUR3.00 p/p/day</p><p>Optional Tipping for Licensed Tour Guide – EUR3.00 p/p/day</p><p>Visa Fee (SCHENGEN) – EUR60 p/p</p><p>Visa Processing Fee – PHP1,500 p/p</p><p>Beverages/Liquid refreshment during meal</p><p>Others not mentioned in the inclusions</p>'
+  
+- name: flight details
+  id: flight-details
+  content: '<p>EMIRATES (Subject to change)</p><p>EK 335 MNLDXB 2355 0440 (8.45H)</p><p>EK 97 DXBFCO 0910 1320 (6.15H)</p><p>EK 76 CDGDXB 2150 0630 (6.40H)</p><p>EK 334 DXBMNL 0920 2140 (8.20H)</p><p>ETIHAD (Subject to change)</p><p>EY 421 MNLAUH 0115 0620 (9.05H)</p><p>EY 83 AUHFCO 0845 1310 (6.25H)</p><p>EY 38 CDGAUH 2200 0705 (7.05H)</p><p>EY 428 AUHMNL 1020 2325 (9.05H)</p>'
+  
+- name: visa requirements
+  id: visa-requirements
+  content: '<p>Duly filled up tourist visa application form.</p><p>2pcs. Passport size photos w/ white background</p><p>Passport ( at least six (6) months valid)</p><p>Original Bank Certificate</p><p>Original & photocopy of old passport with used VISA (within 5 years): Australia, Canada, Japan, Korea, New Zealand, USA and Schengen.</p><p>Employment Certificate with copy of Company ID</p><p>Business docs: DTI/SEC and Mayors/Business Permit</p><p>School Certificate with copy of school ID</p><p>Copy of recent Income Tax Return (ITR)</p><p>NSO Birth Certificate & Marriage Contract (if travelling with immediate family member)</p>'
+    
+- name: booking conditions
+  id: booking-conditions
+  content: '<p>Minimum 30 adults must travel together</p><p>Minimum 20 adults rate is USD4,044.00 (2017)</p><p>Minimum 15 adults rate is USD4,344.00 (2017)</p><p>Higher rate shall be applied if less than 30 passengers</p><p>Rate and itinerary are subject to change without prior notice</p><p>Rate is valid only for Philippine passport holders</p><p>Surcharge will apply for foreign passport holders</p><p>USD500 deposit is required upon booking (non-refundable)</p><p>Full payment is required 45 days prior to departure</p><p>Charges shall applied for any booking cancellation</p>**Not all hotels in Europe offer triple sharing room. If triple sharing room is not available, passengers need to avail the rate based on 1 <p>Twin + 1 Single Room.**</p>'
+
+- name: tour highlights
+  id: tour-highlights
+  content: '<p>ITALY (ROME): Vatican Museum & Sistine Chapel, Colosseum, Trevi Fountain, </p><p>ITALY (PISA): Leaning Tower of Pisa, ITALY (VENICE): Venice Island, </p><p>AUSTRIA (INNSBRUCK): Swarovsky Crystal Shop, </p><p>SWITZERLAND (LUCERNE): 10k ft Swiss Alps, Rhinefalls, </p><p>GERMANY (TITISEE): Cuckoo Clock, </p><p>GERMANY (HEIDELBERG): Heidelberg Castle, </p><p>NETHERLANDS (AMSTERDAM): Vincent Van Gogh Museum, Anne Frank House (facade), Windmills, Cheese & Clog Factory, </p><p>BELGIUM (BRUSSELS): Mini-Europe, Grand Place, Mannekin Pis, </p>FRANCE (PARIS): Eiffel Tower 2nd Floor (if available), La Fayette, Notre Dame Cathedral, Arch de Triomphe, Champs Elysees, Louvre Museum <p>(facade)</p>'
+  
