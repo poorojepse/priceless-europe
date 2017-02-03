@@ -1,0 +1,112 @@
+.header
+   +size(100% auto)
+   +position(absolute, 0px null null null)
+   z-index: 4
+   
+   .container-nav
+      +position(relative)
+      max-width: 1170px
+      padding: 0 1.5rem
+      margin-left: auto
+      margin-right: auto
+      background-color: $header-bgcolor
+      border-radius: 0px 0px 5px 5px
+      
+      &:before
+         content: ""
+         +position(absolute, -20px 0px 0px 0px)
+         box-shadow: inset 0px 0px 15px 1px rgba(white, .9)
+         border-radius: 0px 0px 5px 5px
+      
+      .nav-container
+         padding: 13px 0
+         +display(flex)
+         +position(relative)
+         +align-items(center)
+         +justify-content(space-between)
+            
+         .nav
+            +display(flex)
+            +justify-content(center)
+            margin: 0px
+
+            .nav-item
+               +display(flex)
+               +align-items(center)
+               padding: 0px 20px
+               list-style-type: none
+               border-left: 1px solid $header-color
+
+               a
+                  cursor: pointer
+                  text-align: center
+                  text-transform: uppercase
+                  border-bottom: 1px solid transparent 
+                  
+                  &:hover
+                     border-bottom: 1px solid #fff
+
+               &:first-of-type
+                  border: 0px            
+
+                  a
+                     +display(flex)
+
+                     &:hover
+                        border-bottom: 1px solid transparent
+
+                     svg
+                        +size(32px)
+                        fill: $header-color
+
+               &:last-of-type
+                  padding-right: 0px               
+               
+   @media screen and (max-width: 910px)
+      +position(relative)
+      border-bottom: 1px solid lighten($header-bgcolor, 15)
+      
+      .container-nav
+         padding: 0 .5rem
+         border-radius: 0px
+         
+         &:before
+            +display(none)
+         
+         .nav-container
+            +display(block)
+            
+            .nav-banner
+               margin: 10px 0px 20px
+               
+               a 
+                  +display(block)
+                  width: 165px
+                  margin: 0 auto
+               
+            .nav-main .nav
+               padding: 0
+                  
+               .nav-item
+                  padding: 0 15px
+
+                  a
+                     line-height: 1.5
+
+               .home
+                  +display(none)
+                  
+               .accommodation
+                  border-left: 0px
+                  border-right: 1px solid white
+
+               .tour-highlights
+                  border-left: 0px
+
+
+               @media screen and (max-width: 650px)
+                  .nav-item
+                     padding: 0 10px 
+
+                  .accommodation
+                     +display(none)

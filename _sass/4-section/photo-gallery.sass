@@ -1,0 +1,219 @@
+#photo-gallery-container
+   z-index: 5
+   +position(fixed, 0px null null 0px)
+   +size(100%)
+   +display(flex)
+   +justify-content(center)
+   +align-items(center)
+   background-color: rgba(black, .4)
+   padding: 0 2rem
+   
+   .gallery-container
+      margin-top: -50px
+      +display(inline-block)
+      +position(relative)      
+      
+      .close-gallery
+         +position(absolute, 4px null null 4px)
+         +size(28px)
+         background-color: $site-bgcolor
+         +display(block)
+         border-radius: 0px 0px 3px 0px
+         z-index: 2
+         cursor: pointer
+         
+         &:before
+            content: ""
+            +position(absolute)
+            +size(80% 4px)
+            +transform(rotate(45deg))
+            margin: 12px null null 10%
+            border-radius: 2px
+            background-color: black
+            
+         &:after
+            content: ""
+            +position(absolute)
+            +size(80% 4px)
+            +transform(rotate(-45deg))
+            margin: 12px null null 10%
+            border-radius: 2px
+            background-color: black
+            
+         &:hover
+            &:before, &:after
+               background-color: $site-alt-color
+         
+      
+      .gallery-flexrow
+         +display(flex)
+         padding: 8px
+         background-color: $site-bgcolor
+         border-radius: 3px
+            
+         .active-photo
+            +position(relative)
+            height: 500px
+            background-color: white
+
+            img
+               +size(auto 100%)
+
+            .active-text
+               +position(absolute, null 0px 0px 0px)
+               height: auto
+               min-height: 110px
+               background-color: rgba(black, .3)
+               padding: 10px 7px
+               
+               .name
+                  color: white
+                  margin-bottom: 0px
+            
+         .sidebar-photo
+            padding: 0px 4px
+            +size(200px 500px)
+            overflow-y: auto
+
+            .photo
+               +position(relative)
+               width: 100%
+               margin-bottom: 4px
+                              
+               &:hover
+                  &:before
+                     content: ""
+                     +position(absolute, 50% null null 3px)
+                     +size(8px 26px)
+                     margin-top: -13px
+                     z-index: 1
+                     background-color: white
+                     border-left: 2px solid $site-alt-color
+                     border-radius: 0px 2px 2px 0px
+                     box-shadow: 0px 0px 8px 1px rgba(black, .5)
+                     +transition()
+               
+                  &:after
+                     content: ""
+                     +position(absolute, 0px null 0px 0px)
+                     +size(0px)
+                     background-color: white
+                     border-radius: 50%
+                     margin: auto 0px auto 22px
+                     +transition()
+               
+                  img
+                     opacity: 1
+                     
+               
+               &.current-photo
+                  &:before
+                     content: ""
+                     +position(absolute, 50% null null 3px)
+                     background-color: white
+                     border-left: 3px solid $site-alt-color
+                     +size(11px 50px)
+                     margin-top: -25px
+                     border-radius: 0px 4px 4px 0px
+                     box-shadow: 0px 0px 8px 1px rgba(black, .5)
+                  
+                  &:after
+                     content: ""
+                     +position(absolute, 0px null 0px 0px)
+                     +size(8px)
+                     background-color: white
+                     border-radius: 50%
+                     margin: auto 0px auto 18px
+                     box-shadow: 0px 0px 8px 1px rgba(black, .5)
+                  
+                  img
+                     opacity: 1
+
+               img
+                  +size(100% auto)
+                  cursor: pointer
+                  opacity: .8
+
+                  &:last-of-type
+                     margin-bottom: 0px
+   
+   @media screen and (max-width: 1000px)
+      .gallery-container
+         .gallery-flexrow
+            +display(block)
+            width: 600px
+               
+            .active-photo
+               +size(100% auto)
+               
+               img
+                  +size(100% auto)
+                  
+               .active-text
+                  min-height: 70px
+            
+            .sidebar-photo
+               +display(flex)
+               +size(100% auto)
+               overflow-x: auto
+               margin: 0px -2px
+               padding: 4px 0px 0px
+               
+               .photo
+                  margin: 0px 2px
+                  
+                  &:hover
+                     &:before
+                        content: ""
+                        +position(absolute, 2px 0px 0px 50%)
+                        +size(96% 2px)
+                        margin-left: -48%
+                        margin-top: 0px
+                        z-index: 1
+                        background-color: white
+                        border-left: 0px
+                        border-radius: 0px
+                  
+                     &:after
+                        +display(none)
+                  
+                  &.current-photo
+                     &:before
+                        content: ""
+                        +position(absolute, 2px 0px 0px 50%)
+                        margin-top: 0px
+                        margin-left: -48%
+                        border-left: 0px
+                        background-color: white
+                        border-radius: 0px
+                        +size(96% 5px)
+                     
+                     &:after
+                        +display(none)
+                        
+                  img
+                     +size(140px auto)
+                     
+   @media screen and (max-width: 630px)
+      .gallery-container .gallery-flexrow
+         width: 400px
+            
+   @media screen and (max-width: 400px)
+      .gallery-container .gallery-flexrow
+         width: 330px
+         
+         .active-photo
+            .active-text
+               min-height: auto
+               
+               h3
+                  margin: 0px
+         
+         .sidebar-photo
+            .photo
+               img
+                  width: 115px
+                  
+   @media screen and (max-width: 350px)
+      .gallery-container .gallery-flexrow
+         width: 280px

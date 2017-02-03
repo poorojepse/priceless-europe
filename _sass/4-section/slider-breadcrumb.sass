@@ -1,0 +1,411 @@
+.slider-breadcrumb
+   +position(relative)
+   z-index: -1
+   +size(100% auto) 
+      
+   &:before
+      content: ""
+      z-index: 1
+      +position(absolute, 0px 0px -245px 0px)
+      background:
+         image: url('../img/banner-bg.png')
+         repeat: repeat-x
+         position: 50% 100%
+   
+   &:after
+      content: ""
+      z-index: 1
+      height: 150px
+      +position(absolute, null null -172px 50%)
+      width: 1170px
+      margin-left: -585px
+      background:
+         image: url('../img/breadcrumb-bg.png')
+         repeat: no-repeat
+         position: 0% 0%  
+         
+   .slide-support
+      +position(relative)
+      height: 395px
+
+      .slide-support-flex
+         +position(absolute)
+         +size(100%)
+         +display(none)
+
+         &.active-slide
+            +display(block)
+
+         .slide-bg
+            overflow: hidden
+            +position(absolute, 0px 0px -172px 0px)
+            text-align: center
+            background: 
+               position: center center
+               size: cover
+               
+            &:after
+               content: ""
+               +position(absolute, 0px 0px 0px 0px)
+               background-color: rgba($header-bgcolor, .7)
+            
+         .slide-flexrow
+            +display(flex)
+            padding: 0px 1rem
+            +justify-content(center)   
+
+            .slide-text
+               padding: 120px 1rem 0px 0px
+               +flex-basis(440px)
+               z-index: 1
+               color: #fff
+               min-width: 280px
+
+               p
+                  font-weight: 400
+
+               .slide-title
+                  font: $slide-font
+                  margin-right: 10px
+                  +display(inline-block)
+
+               .slide-loc
+                  text-transform: lowercase
+                  +display(inline-block)
+
+                  ~ *
+                     line-height: 1rem
+                  
+               .slide-info
+                  text-transform: lowercase
+
+            .slide-img
+               +size(550px)
+               overflow: hidden
+               +flex-shrink(0)
+               +position(relative, 1rem null null null)
+               border-radius: 50%
+               border: 20px solid #fff275
+               background-color: transparent
+               box-shadow: 0px 0px 15px 0px rgba(black, .5)
+
+               img
+                  +size(auto 100%)
+                  +position(absolute, 0px null null null)
+
+   .slide-thumbnail
+      +size(100% 1px)
+      +position(absolute, null null 23px null)
+      +display(flex)
+      +justify-content(center)
+      z-index: 3
+
+      .slide-thumb-container
+         +display(flex)
+
+         .thumb-item
+            z-index: 1
+            +position(relative)
+            overflow: hidden
+            margin: 0 10px
+            +display(block)
+            border-radius: 50%
+            +size(60px)
+            +transition()
+            box-shadow: 0px 0px 3px 0px rgba(black, .5)
+
+            &:before
+               border-radius: 50%
+               content: ""
+               z-index: -1
+               background-color: $border-alt
+               +position(absolute, 2px 2px 2px 2px)               
+
+            &.active-thumb
+               +transform(scale(1.1))
+
+               img
+                  opacity: 1
+
+            img
+               opacity: .7
+               border-radius: 50%   
+               border: 4px solid rgba(white, 1)
+               +size(100%)
+
+            &:hover
+               +transform(scale(1.05))
+               img
+                  opacity: 1
+
+         .dos
+            margin-top: 22px
+
+         .tres
+            margin-top: 44px
+
+         .kwatro
+            margin-top: 64px
+
+         .singko
+            margin-top: 81px 
+
+      .nav-prev, .nav-next
+         +display(none)      
+         
+   @media screen and (max-width: 1200px)
+      &:after
+         left: 0px
+         margin-left: 0px
+         width: 100%
+         background: 
+            image: url('../img/breadcrumb-bg-910.png')
+            position: 50% 0%
+         
+   @media screen and (max-width: 910px)
+      .slide-support .slide-support-flex .slide-flexrow               
+         .slide-text
+            +align-self(center)
+            padding-top: 0px
+            min-width: 250px
+
+         .slide-img
+            +size(450px)
+                  
+   @media screen and (max-width: 750px)      
+      &:before
+         bottom: -63px
+         background:
+            image: url('../img/banner-bg-750.png')
+            size: 900px auto
+            position: right bottom
+         
+      
+      &:after
+         bottom: -90px
+         height: 166px
+         background:
+            image: url('../img/breadcrumb-bg-750.png')
+            size: 900px auto
+            position: right top
+      
+      .slide-support
+         height: 340px
+         
+         .slide-support-flex
+            
+            .slide-bg
+               bottom: 0px
+               
+            .slide-flexrow
+               padding: 0px .5rem
+                              
+               .slide-img
+                  border-width: 14px
+                  top: .5rem
+                  +size(300px)
+                  
+      .slide-thumbnail
+         bottom: 8px
+         height: auto
+         
+         .slide-thumb-container
+            width: 100%
+            +justify-content(flex-end)
+            
+            .thumb-item
+               margin-left: 8px
+               margin-right: 8px
+               +size(50px)
+               +flex-shrink(0)
+                              
+            .uno
+               margin-top: 29px
+               
+            .dos
+               margin-top: 35px
+               
+            .tres
+               margin-top: 31px
+               
+            .kwatro
+               margin-top: 20px
+               
+            .singko
+               margin-top: 0px
+               
+   @media screen and (max-width: 570px)         
+      .slide-support
+         .slide-support-flex
+            overflow: hidden
+         
+            .slide-bg
+               +size(100% auto)
+            
+               &:after
+                  +display(none)
+               
+               img
+                  +size(auto 100%)
+            
+            .slide-flexrow
+               +position(relative, 0px null null null)
+               height: 100%
+               +justify-content(flex-start)
+               padding: 0px
+               
+               .slide-text
+                  +flex-basis(auto)
+                  min-width: initial
+                  +align-self(flex-end)
+                  margin-bottom: 7rem
+                  border-radius: 2px
+                  background-color: rgba(black, .4)
+                  
+                  .slide-header
+                     padding: .5rem
+                        
+                     p
+                        margin: 0px
+                        
+                     .slide-title
+                        margin-right: .5rem
+                        font-size: 2rem
+                        
+                     
+                  .slide-info
+                     +display(none)
+               .slide-img
+                  +display(none)
+                     
+   @media screen and (max-width: 352px)
+      .slide-thumbnail
+         .slide-thumb-container
+            +justify-content(center)
+            .thumb-item
+               margin-left: 5px
+               margin-right: 5px
+               +size(45px)
+               
+            .uno
+               margin-top: 38px
+
+            .dos
+               margin-top: 37px
+               
+               
+               
+               
+   .breadcrumb
+      +size(100% 150px)
+      overflow: hidden
+      +position(absolute, null null -173px null)
+      z-index: 2     
+
+      .breadcrumb-support
+         height: 100%
+         padding: 0px 0px 1.5rem
+         margin: 0px auto
+         +display(flex)
+         +align-items(flex-end)
+
+         .breadcrumb-text
+
+            .breadcrumb-promo-blurb
+               font-weight: 400
+               color: white
+               margin: .5rem 0px
+               text-transform: lowercase
+
+            .breadcrumb-promo-price
+               color: white
+               margin-bottom: 0px
+               text-transform: uppercase
+
+         @media screen and (max-width: 1200px)
+            padding-bottom: 1rem
+
+         @media screen and (min-width: 1200px)
+            padding-left: 1rem
+
+         .breadcrumb-purchase
+            margin-left: 2rem
+            +display(flex)
+            +align-items(flex-end)
+            +justify-content(center)
+
+            .purchase
+               width: 150px
+               +display(block)
+               +position(relative)
+               background-color: $bg-alt
+               border-radius: 4px
+               box-shadow: inset 0px 0px 20px rgba(black, .3)
+               padding: 1rem 1rem
+               text-align: center
+
+               &:after
+                  content: ""
+                  border-radius: 4px
+                  +position(absolute, 0px 0px 0px 0px)
+                  box-shadow: 0px 0px 10px 0px rgba(black, .3)
+
+               h4
+                  margin: 0px
+                  text-transform: uppercase
+
+      @media screen and (max-width: 992px)      
+         .breadcrumb-support
+            padding-left: 1rem
+            padding-right: 1rem
+
+            .breadcrumb-purchase .purchase
+               width: 145px
+               padding: .5rem 0px
+
+      @media screen and (max-width: 768px)
+         bottom: -85px
+
+      @media screen and (max-width: 400px)
+         .breadcrumb-support
+            padding-bottom: .4rem      
+
+            .breadcrumb-text
+               +flex-grow(1)
+
+               .breadcrumb-promo-blurb
+                  font-size: .9rem
+
+               .breadcrumb-promo-price
+                  font-size: 1.1rem
+
+            .breadcrumb-purchase
+               width: 90px
+
+               .purchase
+                  width: 80px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

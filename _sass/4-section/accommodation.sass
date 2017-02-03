@@ -1,0 +1,42 @@
+.accommodation-support
+   +size(100% auto)
+   margin-bottom: 1rem
+   padding: 15px 10px 10px
+   border:
+      width: 1px 1px 1px 10px
+      style: solid
+      color: $border $border $border $site-alt-color
+
+   .accommodation-title
+      padding-left: 17px
+      +position(relative)
+
+      &:before
+         content: ""
+         +position(absolute, 2px null null 3px)
+         border-top: 10px solid transparent
+         border-left: 7px solid $site-alt-color
+         border-bottom: 10px solid transparent
+
+      &:after
+         content: ""
+         +position(absolute, 2px null null 0px)
+         +size(3px 20px)
+         background-color: $site-alt-color
+
+   .accommodation-flexrow
+      +display(flex)
+      max-width: 100%
+      overflow-x: auto
+
+      .accommodation-flexitem
+         cursor: pointer
+         +size(180px 125px)
+         +display(block)
+         margin: 0px 3px 
+
+         &:first-of-type
+            margin-left: 0px
+
+         &:last-of-type
+            margin-right: 0px          
